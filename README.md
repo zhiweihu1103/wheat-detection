@@ -19,7 +19,6 @@ If you run **pip install mmcv-full** meet wrong notification, you can see [here]
 pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu100/torch1.3.1/index.html
 ```
 # Prepare in advance
-
 * You should first process the data into voc2017 format and put it in the **data** path.
 * For subsequent training, you should modify the file under **config**. In our case, we have modified the following parts:
   * For **configs\_base_\models\faster_rcnn_r50_fpn.py** file
@@ -34,3 +33,8 @@ pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu100/torch1.3
     * change **CLASSES = ('wheat')** (line 32)
   * For **\mmdet\core\evaluation\class_names.py** file
     * change **coco_classes** (line 69)
+# Train
+Take Faster R-CNN-R50 as example, you should cd the project root path, latter execute the following command
+```
+python tools/train.py configs/wheat/faster_rcnn_r50_fpn_1x.py --work_dir logs_wheat/faster_rcnn_r50/normal
+```
