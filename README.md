@@ -45,5 +45,9 @@ work_dir = './logs_wheat/faster_rcnn_r50/normal'
 # Train
 Take Faster R-CNN-R50 as example, you should cd the project root path, latter execute the following command
 ```
-CUDA_VISIBLE_DEVICES=1 python tools/train.py configs/wheat/faster_rcnn_r50_fpn_1x.py --work_dir logs_wheat/faster_rcnn_r50/normal
+sh scripts/train_faster_rcnn_r50_fpn_1x.sh
+```
+You can see the logs by following command
+```
+tail -f logs_console/train_faster_rcnn_r50_fpn_1x.out
 ```
