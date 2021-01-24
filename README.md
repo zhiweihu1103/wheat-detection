@@ -13,7 +13,7 @@ pip install terminaltables
 pip install mmcv-full
 sudo pip install -e .
 ```
-The version of mmdetection we use is [2.7.0](https://codeload.github.com/open-mmlab/mmdetection/zip/v2.7.0), and the version of mmcv-full we use is [1.2.1](https://download.openmmlab.com/mmcv/dist/cu100/torch1.4.0/mmcv_full-1.2.1-cp38-cp38-manylinux1_x86_64.whl),The version of python we use is 3.8.5.
+The version of **mmdetection** we use is [2.7.0](https://codeload.github.com/open-mmlab/mmdetection/zip/v2.7.0), and the version of **mmcv-full** we use is [1.2.1](https://download.openmmlab.com/mmcv/dist/cu100/torch1.4.0/mmcv_full-1.2.1-cp38-cp38-manylinux1_x86_64.whl),The version of **python** we use is 3.8.5.
 
 If you run **pip install mmcv-full** meet wrong notification, you can see [here](https://github.com/open-mmlab/mmcv#install-with-pip) for different versions of MMCV compatible to different PyTorch and CUDA versions. In our case, we use following command to successfully install mmcv.
 ```
@@ -23,7 +23,7 @@ pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu100/torch1.4
 * You should first process the data into voc2017 format and put it in the **data** path.
 * For subsequent training, you should modify the file under **config**. In our case, we have modified the following parts:
   * For **configs\_base_\models\faster_rcnn_r50_fpn.py** file
-    * change num_classes=1 (line 46, 1 is represent the class nums);
+    * change **num_classes=1** (line 46, 1 is represent the class nums);
   * For **configs\_base_\datasets\coco_detection.py** file
     * change **data_root = 'data/wheat/'** (line 2)
     * search **img_scale**, change it to (1024, 1024)
