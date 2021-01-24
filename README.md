@@ -36,5 +36,5 @@ pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu100/torch1.3
 # Train
 Take Faster R-CNN-R50 as example, you should cd the project root path, latter execute the following command
 ```
-python tools/train.py configs/wheat/faster_rcnn_r50_fpn_1x.py --work_dir logs_wheat/faster_rcnn_r50/normal
+CUDA_VISIBLE_DEVICES=1 python tools/train.py configs/wheat/faster_rcnn_r50_fpn_1x.py --work_dir logs_wheat/faster_rcnn_r50/normal
 ```
