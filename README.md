@@ -25,7 +25,8 @@ pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu100/torch1.3
   * For **configs\_base_\models\faster_rcnn_r50_fpn.py** file
     * change num_classes=1 (line 46, 1 is represent the class nums);
   * For **configs\_base_\datasets\coco_detection.py** file
-    * change data_root = 'data/wheat/' (line 2)
+    * change **data_root = 'data/wheat/'** (line 2)
     * search **img_scale**, change it to (1024, 1024)
     * change **workers_per_gpu=0** (line 32)
     * change **samples_per_gpu=4** (line 31)
+    * change all train/val/test, search **ann_file** and **img_prefix** to your datasets path.
