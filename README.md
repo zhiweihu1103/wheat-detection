@@ -34,6 +34,14 @@ pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu100/torch1.4
     * change **CLASSES = ('wheat')** (line 32)
   * For **\mmdet\core\evaluation\class_names.py** file
     * change **coco_classes** (line 69)
+* Besides, for **faster_rcnn_r50_fpn_1x.py**, we also made the following changes to this config file:
+```python
+optimizer = dict(type='SGD', lr=0.02, momentum=0.9, weight_decay=0.0001)
+checkpoint_config = dict(interval=5)
+evaluation = dict(interval=1)
+total_epochs = 10
+work_dir = './logs_wheat/faster_rcnn_r50/normal'
+```
 # Train
 Take Faster R-CNN-R50 as example, you should cd the project root path, latter execute the following command
 ```
