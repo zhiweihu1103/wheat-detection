@@ -22,5 +22,7 @@ pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu100/torch1.3
 
 - You should first process the data into voc2017 format and put it in the **data** path.
 - For subsequent training, you should modify the file under **config**. In our case, we have modified the following parts:
+```
 (1) Change the **configs\_base_\models\faster_rcnn_r50_fpn.py** file
   A. change **num_classes=1,** (line 46, the 1 is represent the class nums)
+```
