@@ -21,5 +21,12 @@ pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu100/torch1.3
 # Prepare in advance
 
 - You should first process the data into voc2017 format and put it in the **data** path.
-- For subsequent training, you should modify the file under **config**.
-
+- For subsequent training, you should modify the file under **config**. In our case, we have modified the following parts:
+```
+1. 第一步
+   1. 第一小步
+        1. 第一小小步
+        2. 第二小小步
+   2. 第二小步
+1. 第二步
+```
