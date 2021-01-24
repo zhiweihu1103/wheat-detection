@@ -12,4 +12,5 @@
 - pip install mmcv-full
 - sudo pip install -e .
 
+
 If you run **pip install mmcv-full** meet wrong notification, you can see [here](https://github.com/open-mmlab/mmcv#install-with-pip) for different versions of MMCV compatible to different PyTorch and CUDA versions. In our case, we use **[pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu100/torch1.3.1/index.html]** to successfully install mmcv.
