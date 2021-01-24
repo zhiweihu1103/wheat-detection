@@ -29,4 +29,4 @@ pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu100/torch1.3
     * search **img_scale**, change it to (1024, 1024)
     * change **workers_per_gpu=0** (line 32)
     * change **samples_per_gpu=4** (line 31)
-    * change all train/val/test, search **ann_file** and **img_prefix** to your datasets path.
+    * change all train/val/test related information, search **ann_file** and **img_prefix** to your datasets path.
