@@ -22,7 +22,10 @@ pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu100/torch1.3
 
 * You should first process the data into voc2017 format and put it in the **data** path.
 * For subsequent training, you should modify the file under **config**. In our case, we have modified the following parts:
-  * For configs\_base_\models\faster_rcnn_r50_fpn.py file
+  * For **configs\_base_\models\faster_rcnn_r50_fpn.py** file
     * change num_classes=1 (line 46, 1 is represent the class nums);
-  * For configs\_base_\datasets\coco_detection.py
-   * change data_root = 'data/wheat/' (line 2)
+  * For **configs\_base_\datasets\coco_detection.py** file
+    * change data_root = 'data/wheat/' (line 2)
+    * search **img_scale**, change it to (1024, 1024)
+    * change **workers_per_gpu=0** (line 32)
+    * change **samples_per_gpu=4** (line 31)
