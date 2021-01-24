@@ -30,3 +30,7 @@ pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu100/torch1.3
     * change **workers_per_gpu=0** (line 32)
     * change **samples_per_gpu=4** (line 31)
     * change all train/val/test related information, search **ann_file** and **img_prefix** to your datasets path.
+  * For **\mmdet\datasets\coco.py** file
+    * change **CLASSES = ('wheat')** (line 32)
+  * For **\mmdet\core\evaluation\class_names.py** file
+    * change **coco_classes** (line 69)
