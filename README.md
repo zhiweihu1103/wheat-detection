@@ -18,3 +18,8 @@ If you run **pip install mmcv-full** meet wrong notification, you can see [here]
 ```
 pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu100/torch1.3.1/index.html
 ```
+# Prepare in advance
+```
+1. You should first process the data into voc2017 format and put it in the data path.
+2. For subsequent training, you should modify the file under config.
+```
