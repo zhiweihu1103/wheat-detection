@@ -51,3 +51,9 @@ You can see the logs by following command
 ```
 tail -f logs_console/train_faster_rcnn_r50_fpn_1x.out
 ```
+# Test
+Take Faster R-CNN-R50 as example, you should cd the project root path, latter execute the following command
+```
+python tools/test.py configs/wheat/faster_rcnn_r50_fpn_1x.py logs_wheat/faster_rcnn_r50/normal/epoch_10.pth --show-dir show_test/faster_rcnn_r50/normal
+```
+Then at **show_test/faster_rcnn_r50/normal** you will find the predict result with bbox.
