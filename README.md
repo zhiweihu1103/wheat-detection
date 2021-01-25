@@ -11,7 +11,7 @@ pip install imagecorruptions
 pip install pycocotools
 pip install terminaltables
 pip install mmcv-full
-sudo pip install -e .
+sudo pip install -v -e .
 ```
 The version of **mmdetection** we use is [2.7.0](https://codeload.github.com/open-mmlab/mmdetection/zip/v2.7.0), and the version of **mmcv-full** we use is [1.2.1](https://download.openmmlab.com/mmcv/dist/cu100/torch1.4.0/mmcv_full-1.2.1-cp38-cp38-manylinux1_x86_64.whl),The version of **python** we use is 3.8.5.
 
