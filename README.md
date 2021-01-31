@@ -58,7 +58,8 @@ CUDA_VISIBLE_DEVICES=0 python tools/test.py configs/wheat/faster_rcnn_r50_fpn_1x
 ```
 Then at **show_test/faster_rcnn_r50/normal** you will find the predict result with bbox.
 # Results and Models
-Backbone | Lr | schd | Inf time(fps) | AP-a-100(0.5) | AP-a-100(0.75) | AP-a-100(0.5:0.95) 
+Backbone | Lr | schd | Inf time(fps) | a-100(0.5) | a-100(0.75) | a-100(0.5:0.95) 
+-------- | -- | ---- | ------------- | ---------- | ----------- | ---------------
 # Postscript
 * If you want to modify the related display effects of the detection box, such as the color of the detection box, the thickness of the detection box, etc., you can modify the **show_result** method in **/mmdet/models/detectors/base.py**. For details, please refer to this [document](https://mmdetection.readthedocs.io/en/latest/_modules/mmdet/models/detectors/base.html?highlight=imshow_det_bboxes#). Pay attention to re-execute **pip install -v -e .** command after modification.
 * When we train **Cascade-R-CNN-ResNeXt101**, the loss value is nan. The solution to this problem can be [referred to](https://github.com/open-mmlab/mmdetection/issues/3013). Specifically, add the gradient clip option in **cascade_rcnn_x101_32x4d_fpn_1x.py**, that is, add the following line of code **optimizer_config = dict(_delete_=True, grad_clip=dict(max_norm=35, norm_type=2))**
