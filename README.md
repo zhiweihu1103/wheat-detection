@@ -57,29 +57,29 @@ Take Faster R-CNN-R50 as example, you should cd the project root path, latter ex
 CUDA_VISIBLE_DEVICES=0 python tools/test.py configs/wheat/faster_rcnn_r50_fpn_1x.py logs_wheat/faster_rcnn_r50/normal/latest.pth --show-dir show_test/faster_rcnn_r50/normal --eval bbox
 ```
 Then at **show_test/faster_rcnn_r50/normal** you will find the predict result with bbox.
-# Results and Models (AP)
+# Results and Logs (AP)
 Task | Backbone | Loss-Lr | schd | Att | fps | a-0.5 | a-0.75 | a-100-mul | s-mul | m-mul | l-mul | C-L |
 :--: | :------: | :-----: | :--: | :-: | :-: | :---: | :----: | :-------: | :---: | :---: | :---: | :-:
-F-RCNN | R-50-FPN | IOULoss | 1x | N | 6.83 | 91.5 | 50.2 | 50.4 | 15.7 | 49.9 | 53.8
-F-RCNN | R-50-FPN | GIOULoss | 1x | N | 6.76 | 91.5 | 49.5 | 50.2 | 16.0 | 49.8 | 53.7
-F-RCNN | R-101-FPN | IOULoss | 1x | N | 5.68 | 91.5 | 49.5 | 50.1 | 14.5 | 49.6 | 53.6
-F-RCNN | R-101-FPN | GIOULoss | 1x | N | 5.73 | 91.6 | 50.7 | 50.6 | 16.2 | 50.3 | 53.8
-F-RCNN | X-101-FPN | IOULoss | 1x | N | 4.67 | 91.6 | 50.7 | 50.6 | 15.1 | 50.2 | 53.9
-F-RCNN | X-101-FPN | GIOULoss | 1x | N | 4.67 | 91.6 | 50.7 | 50.6 | 15.1 | 50.2 | 53.9
-C-RCNN | R-50-FPN | IOULoss | 1x | N | 5.77 | 91.5 | 52.1 | 51.2 | 16.1 | 50.7 | 54.7
-C-RCNN | R-50-FPN | GIOULoss | 1x | N | 3.84 | 91.5 | 52.6 | 51.6 | 15.8 | 51.0 | 55.4
-C-RCNN | R-101-FPN | IOULoss | 1x | N | 5.04 | 91.6 | 52.5 | 51.4 | 15.4 | 50.8 | 55.2
-C-RCNN | R-101-FPN | GIOULoss | 1x | N | 5.14 | 91.5 | 51.0 | 50.9 | 13.9 | 50.3 | 55.0
-C-RCNN | X-101-FPN | IOULoss | 1x | N | 4.28 | 92.4 | 52.7 | 52.0 | 15.3 | 51.4 | 55.7
-C-RCNN | X-101-FPN | GIOULoss | 1x | N | 4.36 | 91.6 | 52.3 | 51.4 | 16.2 | 50.8 | 55.4
+F | R-50 | IOULoss | 1x | N | 6.83 | 91.5 | 50.2 | 50.4 | 15.7 | 49.9 | 53.8
+F | R-50 | GIOULoss | 1x | N | 6.76 | 91.5 | 49.5 | 50.2 | 16.0 | 49.8 | 53.7
+F | R-101 | IOULoss | 1x | N | 5.68 | 91.5 | 49.5 | 50.1 | 14.5 | 49.6 | 53.6
+F | R-101 | GIOULoss | 1x | N | 5.73 | 91.6 | 50.7 | 50.6 | 16.2 | 50.3 | 53.8
+F | X-101 | IOULoss | 1x | N | 4.67 | 91.6 | 50.7 | 50.6 | 15.1 | 50.2 | 53.9
+F | X-101 | GIOULoss | 1x | N | 4.67 | 91.6 | 50.7 | 50.6 | 15.1 | 50.2 | 53.9
+C | R-50 | IOULoss | 1x | N | 5.77 | 91.5 | 52.1 | 51.2 | 16.1 | 50.7 | 54.7
+C | R-50 | GIOULoss | 1x | N | 3.84 | 91.5 | 52.6 | 51.6 | 15.8 | 51.0 | 55.4
+C | R-101 | IOULoss | 1x | N | 5.04 | 91.6 | 52.5 | 51.4 | 15.4 | 50.8 | 55.2
+C | R-101 | GIOULoss | 1x | N | 5.14 | 91.5 | 51.0 | 50.9 | 13.9 | 50.3 | 55.0
+C | X-101 | IOULoss | 1x | N | 4.28 | 92.4 | 52.7 | 52.0 | 15.3 | 51.4 | 55.7
+C | X-101 | GIOULoss | 1x | N | 4.36 | 91.6 | 52.3 | 51.4 | 16.2 | 50.8 | 55.4
 * Our results are test in P100.
-* Task: task network, contains Faster R-CNN, Cascade R-CNN, Libra R-CNN and VFNet.
+* Task: task network, contains Faster R-CNN(F), Cascade R-CNN(C), Libra R-CNN(L) and VFNet(V).
 * Backbone: contains ResNet50, ResNet101 and ResNeXt101.
 * Loss: contains IOULoss and GIOULoss.
 * schd: contains 1x and 2x.
 * **a** represents all with maxDets value 1000. **a-100** represents all with maxDets value 100. **mul** represent 0.5:0.95.
 * C-L represent config and log files.
-# Results and Models (AR)
+# Results and Logs (AR)
 
 # Postscript
 * If you want to modify the related display effects of the detection box, such as the color of the detection box, the thickness of the detection box, etc., you can modify the **show_result** method in **/mmdet/models/detectors/base.py**. For details, please refer to this [document](https://mmdetection.readthedocs.io/en/latest/_modules/mmdet/models/detectors/base.html?highlight=imshow_det_bboxes#). Pay attention to re-execute **pip install -v -e .** command after modification.
