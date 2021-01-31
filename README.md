@@ -57,7 +57,7 @@ Take Faster R-CNN-R50 as example, you should cd the project root path, latter ex
 CUDA_VISIBLE_DEVICES=0 python tools/test.py configs/wheat/faster_rcnn_r50_fpn_1x.py logs_wheat/faster_rcnn_r50/normal/latest.pth --show-dir show_test/faster_rcnn_r50/normal --eval bbox
 ```
 Then at **show_test/faster_rcnn_r50/normal** you will find the predict result with bbox.
-# Results and Models
+# Results and Models (AP)
 Task | Backbone | Loss-Lr | schd | Att | fps | a-0.5 | a-0.75 | a-100-mul | s-mul | m-mul | l-mul | C-L |
 :--: | :------: | :-----: | :--: | :-: | :-: | :---: | :----: | :-------: | :---: | :---: | :---: | :-:
 F-RCNN | R-50-FPN | IOULoss | 1x | N | 6.83 | 91.5 | 50.2 | 50.4 | 15.7 | 49.9 | 53.8
@@ -72,6 +72,7 @@ C-RCNN | R-101-FPN | IOULoss | 1x | N | 5.04 | 91.6 | 52.5 | 51.4 | 15.4 | 50.8 
 C-RCNN | R-101-FPN | GIOULoss | 1x | N | 5.14 | 91.5 | 51.0 | 50.9 | 13.9 | 50.3 | 55.0
 C-RCNN | X-101-FPN | IOULoss | 1x | N | 4.28 | 92.4 | 52.7 | 52.0 | 15.3 | 51.4 | 55.7
 C-RCNN | X-101-FPN | GIOULoss | 1x | N | 4.36 | 91.6 | 52.3 | 51.4 | 16.2 | 50.8 | 55.4
+# Results and Models (AR)
 * Our results are test in P100.
 * Task: task network, contains Faster R-CNN, Cascade R-CNN, Libra R-CNN and VFNet.
 * Backbone: contains ResNet50, ResNet101 and ResNeXt101.
