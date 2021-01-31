@@ -72,7 +72,6 @@ C-RCNN | R-101-FPN | IOULoss | 1x | N | 5.04 | 91.6 | 52.5 | 51.4 | 15.4 | 50.8 
 C-RCNN | R-101-FPN | GIOULoss | 1x | N | 5.14 | 91.5 | 51.0 | 50.9 | 13.9 | 50.3 | 55.0
 C-RCNN | X-101-FPN | IOULoss | 1x | N | 4.28 | 92.4 | 52.7 | 52.0 | 15.3 | 51.4 | 55.7
 C-RCNN | X-101-FPN | GIOULoss | 1x | N | 4.36 | 91.6 | 52.3 | 51.4 | 16.2 | 50.8 | 55.4
-# Results and Models (AR)
 * Our results are test in P100.
 * Task: task network, contains Faster R-CNN, Cascade R-CNN, Libra R-CNN and VFNet.
 * Backbone: contains ResNet50, ResNet101 and ResNeXt101.
@@ -80,6 +79,8 @@ C-RCNN | X-101-FPN | GIOULoss | 1x | N | 4.36 | 91.6 | 52.3 | 51.4 | 16.2 | 50.8
 * schd: contains 1x and 2x.
 * **a** represents all with maxDets value 1000. **a-100** represents all with maxDets value 100. **mul** represent 0.5:0.95.
 * C-L represent config and log files.
+# Results and Models (AR)
+
 # Postscript
 * If you want to modify the related display effects of the detection box, such as the color of the detection box, the thickness of the detection box, etc., you can modify the **show_result** method in **/mmdet/models/detectors/base.py**. For details, please refer to this [document](https://mmdetection.readthedocs.io/en/latest/_modules/mmdet/models/detectors/base.html?highlight=imshow_det_bboxes#). Pay attention to re-execute **pip install -v -e .** command after modification.
 * When we train **Cascade-R-CNN-ResNeXt101**, the loss value is nan. The solution to this problem can be [referred to](https://github.com/open-mmlab/mmdetection/issues/3013). Specifically, add the gradient clip option in **cascade_rcnn_x101_32x4d_fpn_1x.py**, that is, add the following line of code **optimizer_config = dict(_delete_=True, grad_clip=dict(max_norm=35, norm_type=2))**
