@@ -58,7 +58,7 @@ CUDA_VISIBLE_DEVICES=0 python tools/test.py configs/wheat/faster_rcnn_r50_fpn_1x
 ```
 Then at **show_test/faster_rcnn_r50/normal** you will find the predict result with bbox.
 # Results and Models
-Task | Backbone | Loss-Lr | schd | Att | fps | a-0.5 | a-0.75 | a-100-mul | s-mul | m-mul | l-mul | C-D |
+Task | Backbone | Loss-Lr | schd | Att | fps | a-0.5 | a-0.75 | a-100-mul | s-mul | m-mul | l-mul | C-L |
 :--: | :------: | :-----: | :--: | :-: | :-: | :---: | :----: | :-------: | :---: | :---: | :---: | :-:
 F-RCNN | R-50-FPN | IOULoss | 1x | N | 6.83 | 91.5 | 50.2 | 50.4 | 15.7 | 49.9 | 53.8
 F-RCNN | R-50-FPN | GIOULoss | 1x | N | 6.76 | 91.5 | 49.5 | 50.2 | 16.0 | 49.8 | 53.7
@@ -78,7 +78,7 @@ C-RCNN | X-101-FPN | GIOULoss | 1x | N | 4.36 | 91.6 | 52.3 | 51.4 | 16.2 | 50.8
 * Loss: contains IOULoss and GIOULoss.
 * schd: contains 1x and 2x.
 * **a** represents all with maxDets value 1000. **a-100** represents all with maxDets value 100. **mul** represent 0.5:0.95.
-* C-D represent config and log files.
+* C-L represent config and log files.
 # Postscript
 * If you want to modify the related display effects of the detection box, such as the color of the detection box, the thickness of the detection box, etc., you can modify the **show_result** method in **/mmdet/models/detectors/base.py**. For details, please refer to this [document](https://mmdetection.readthedocs.io/en/latest/_modules/mmdet/models/detectors/base.html?highlight=imshow_det_bboxes#). Pay attention to re-execute **pip install -v -e .** command after modification.
 * When we train **Cascade-R-CNN-ResNeXt101**, the loss value is nan. The solution to this problem can be [referred to](https://github.com/open-mmlab/mmdetection/issues/3013). Specifically, add the gradient clip option in **cascade_rcnn_x101_32x4d_fpn_1x.py**, that is, add the following line of code **optimizer_config = dict(_delete_=True, grad_clip=dict(max_norm=35, norm_type=2))**
