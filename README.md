@@ -58,8 +58,8 @@ CUDA_VISIBLE_DEVICES=0 python tools/test.py configs/wheat/faster_rcnn_r50_fpn_1x
 ```
 Then at **show_test/faster_rcnn_r50/normal** you will find the predict result with bbox.
 # Results and Models
-Task | Backbone | Loss-Lr | schd | Att | fps | a-0.5 | a-0.75 | a-100-mul | s-mul | m-mul | l-mul | Conf | Down |
-:--: | :------: | :-----: | :--: | :-: | :-: | :---: | :----: | :-------: | :---: | :---: | :---: | :--: | :--: 
+Task | Backbone | Loss-Lr | schd | Att | fps | a-0.5 | a-0.75 | a-100-mul | s-mul | m-mul | l-mul | C-D |
+:--: | :------: | :-----: | :--: | :-: | :-: | :---: | :----: | :-------: | :---: | :---: | :---: | :-:
 F-RCNN | R-50-FPN | IOULoss | 1x | N | 6.83 | 91.5 | 50.2 | 50.4 | 15.7 | 49.9 | 53.8
 F-RCNN | R-50-FPN | GIOULoss | 1x | N | 6.76 | 91.5 | 49.5 | 50.2 | 16.0 | 49.8 | 53.7
 F-RCNN | R-101-FPN | IOULoss | 1x | N | 5.68 | 91.5 | 49.5 | 50.1 | 14.5 | 49.6 | 53.6
