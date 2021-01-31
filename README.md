@@ -59,7 +59,7 @@ CUDA_VISIBLE_DEVICES=0 python tools/test.py configs/wheat/faster_rcnn_r50_fpn_1x
 Then at **show_test/faster_rcnn_r50/normal** you will find the predict result with bbox.
 # Results and Models
 Task | Backbone | Loss-Lr | schd | Inf-time(fps) | a-0.5 | a-0.75 | a-100-multi | s-multi | m-multi | l-multi
----- | -------- | ------- | ---- | ------------- | ----- | ------ | ----------- | ------- | ------- | -------
+:--: | :------: | :-----: | :--: | :-----------: | :---: | :----: | :---------: | :-----: | :-----: | :-----:
 F-RCNN | R-50-FPN | IOULoss | 1x | 14.6 | 0.915 | 0.502 | 0.504 | 0.157 | 0.499 | 0.538
 * Task: task network, contains Faster R-CNN, Cascade R-CNN, Libra R-CNN and VFNet.
 * Backbone: contains ResNet50, ResNet101 and ResNeXt101.
