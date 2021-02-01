@@ -78,6 +78,10 @@ C | R-101 | IOULoss | 1x | N | 5.04 | 91.6 | 52.5 | 51.4 | 15.4 | 50.8 | 55.2
 C | R-101 | GIOULoss | 1x | N | 5.14 | 91.5 | 51.0 | 50.9 | 13.9 | 50.3 | 55.0
 C | X-101 | IOULoss | 1x | N | 4.28 | 92.4 | 52.7 | 52.0 | 15.3 | 51.4 | 55.7
 C | X-101 | GIOULoss | 1x | N | 4.36 | 91.6 | 52.3 | 51.4 | 16.2 | 50.8 | 55.4
+V | R-50 | IOULoss | 1x | N | 6.45 | 93.4 | 56.5 | 54.4 | 17.4 | 54.0 | 57.8
+V | R-50 | GIOULoss | 1x | N | 6.51 | 93.3 | 56.5 | 54.4 | 16.8 | 54.1 | 57.9
+V | R-101 | GIOULoss | 1x | N | 5.30 | 93.4 | 56.5 | 54.5 | 16.2 | 54.0 | 58.4
+V | X-101 | GIOULoss | 1x | N | 5.39 | 93.6 | 56.9 | 54.8 | 16.2 | 54.2 | 58.5
 * Our results are test in P100.
 * Task: task network, contains Faster R-CNN(F), Libra R-CNN(L), Cascade R-CNN(C) and VFNet(V).
 * Backbone: contains ResNet50, ResNet101 and ResNeXt101.
