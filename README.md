@@ -90,7 +90,30 @@ V | X-101 | GIOULoss | 1x | N | 5.39 | 93.6 | 56.9 | 54.8 | 16.2 | 54.2 | 58.5
 * **a** represents all with maxDets value 1000. **a-100** represents all with maxDets value 100. **mul** represent 0.5:0.95.
 * C-L represent config and log files.
 # Results and Logs (AR)
-
+Task | Backbone | Loss-Lr | schd | Att | a-100 | a-300 | a-1000 | s-1000 | m-1000 | l-1000 |
+:--: | :------: | :-----: | :--: | :-: | :---: | :---: | :----: | :----: | :----: | :----: |
+F | R-50 | IOULoss | 1x | N | 91.5 | 50.2 | 50.4 | 15.7 | 49.9 | 53.8
+F | R-50 | GIOULoss | 1x | N | 91.5 | 49.5 | 50.2 | 16.0 | 49.8 | 53.7
+F | R-101 | IOULoss | 1x | N | 91.5 | 49.5 | 50.1 | 14.5 | 49.6 | 53.6
+F | R-101 | GIOULoss | 1x | N | 91.6 | 50.7 | 50.6 | 16.2 | 50.3 | 53.8
+F | X-101 | IOULoss | 1x | N | 91.6 | 50.7 | 50.6 | 15.1 | 50.2 | 53.9
+F | X-101 | GIOULoss | 1x | N | 91.6 | 50.7 | 50.6 | 15.1 | 50.2 | 53.9
+L | R-50 | IOULoss | 1x | N | 92.1 | 50.2 | 50.5 | 14.7 | 50.1 | 53.6
+L | R-50 | GIOULoss | 1x | N | 91.4 | 50.0 | 50.1 | 14.3 | 50.2 | 52.3
+L | R-101 | IOULoss | 1x | N | 91.3 | 51.2 | 50.9 | 13.9 | 50.4 | 53.7
+L | R-101 | GIOULoss | 1x | N | 91.4 | 49.4 | 50.2 | 13.5 | 49.9 | 52.9
+L | X-101 | IOULoss | 1x | N | 91.4 | 50.9 | 50.7 | 14.1 | 50.4 | 53.4
+L | X-101 | GIOULoss | 1x | N | 91.4 | 50.4 | 50.6 | 14.2 | 50.4 | 53.3
+C | R-50 | IOULoss | 1x | N | 91.5 | 52.1 | 51.2 | 16.1 | 50.7 | 54.7
+C | R-50 | GIOULoss | 1x | N | 91.5 | 52.6 | 51.6 | 15.8 | 51.0 | 55.4
+C | R-101 | IOULoss | 1x | N | 91.6 | 52.5 | 51.4 | 15.4 | 50.8 | 55.2
+C | R-101 | GIOULoss | 1x | N | 91.5 | 51.0 | 50.9 | 13.9 | 50.3 | 55.0
+C | X-101 | IOULoss | 1x | N | 92.4 | 52.7 | 52.0 | 15.3 | 51.4 | 55.7
+C | X-101 | GIOULoss | 1x | N | 91.6 | 52.3 | 51.4 | 16.2 | 50.8 | 55.4
+V | R-50 | IOULoss | 1x | N | 93.4 | 56.5 | 54.4 | 17.4 | 54.0 | 57.8
+V | R-50 | GIOULoss | 1x | N | 93.3 | 56.5 | 54.4 | 16.8 | 54.1 | 57.9
+V | R-101 | GIOULoss | 1x | N | 93.4 | 56.5 | 54.5 | 16.2 | 54.0 | 58.4
+V | X-101 | GIOULoss | 1x | N | 93.6 | 56.9 | 54.8 | 16.2 | 54.2 | 58.5
 # Postscript
 * If you want to modify the related display effects of the detection box, such as the color of the detection box, the thickness of the detection box, etc., you can modify the **show_result** method in **/mmdet/models/detectors/base.py**. For details, please refer to this [document](https://mmdetection.readthedocs.io/en/latest/_modules/mmdet/models/detectors/base.html?highlight=imshow_det_bboxes#). Pay attention to re-execute **pip install -v -e .** command after modification.
 * When we train **Cascade-R-CNN-ResNeXt101**, the loss value is nan. The solution to this problem can be [referred to](https://github.com/open-mmlab/mmdetection/issues/3013). Specifically, add the gradient clip option in **cascade_rcnn_x101_32x4d_fpn_1x.py**, that is, add the following line of code **optimizer_config = dict(_delete_=True, grad_clip=dict(max_norm=35, norm_type=2))**
