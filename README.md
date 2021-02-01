@@ -92,28 +92,28 @@ V | X-101 | GIOULoss | 1x | N | N | 5.39 | 93.6 | 56.9 | 54.8 | 16.2 | 54.2 | 58
 # Results and Logs (AR)
 Task | Backbone | Loss-Lr | schd | Att | DCN | a-100 | a-300 | a-1000 | s-1000 | m-1000 | l-1000 |
 :--: | :------: | :-----: | :--: | :-: | :-: | :---: | :---: | :----: | :----: | :----: | :----: |
-F | R-50 | IOULoss | 1x | N | N | 91.5 | 50.2 | 50.4 | 15.7 | 49.9 | 53.8
-F | R-50 | GIOULoss | 1x | N | N | 91.5 | 49.5 | 50.2 | 16.0 | 49.8 | 53.7
-F | R-101 | IOULoss | 1x | N | N | 91.5 | 49.5 | 50.1 | 14.5 | 49.6 | 53.6
-F | R-101 | GIOULoss | 1x | N | N | 91.6 | 50.7 | 50.6 | 16.2 | 50.3 | 53.8
-F | X-101 | IOULoss | 1x | N | N | 91.6 | 50.7 | 50.6 | 15.1 | 50.2 | 53.9
-F | X-101 | GIOULoss | 1x | N | N | 91.6 | 50.7 | 50.6 | 15.1 | 50.2 | 53.9
-L | R-50 | IOULoss | 1x | N | N | 92.1 | 50.2 | 50.5 | 14.7 | 50.1 | 53.6
-L | R-50 | GIOULoss | 1x | N | N | 91.4 | 50.0 | 50.1 | 14.3 | 50.2 | 52.3
-L | R-101 | IOULoss | 1x | N | N | 91.3 | 51.2 | 50.9 | 13.9 | 50.4 | 53.7
-L | R-101 | GIOULoss | 1x | N | N | 91.4 | 49.4 | 50.2 | 13.5 | 49.9 | 52.9
-L | X-101 | IOULoss | 1x | N | N | 91.4 | 50.9 | 50.7 | 14.1 | 50.4 | 53.4
-L | X-101 | GIOULoss | 1x | N | N | 91.4 | 50.4 | 50.6 | 14.2 | 50.4 | 53.3
-C | R-50 | IOULoss | 1x | N | N | 91.5 | 52.1 | 51.2 | 16.1 | 50.7 | 54.7
-C | R-50 | GIOULoss | 1x | N | N | 91.5 | 52.6 | 51.6 | 15.8 | 51.0 | 55.4
-C | R-101 | IOULoss | 1x | N | N | 91.6 | 52.5 | 51.4 | 15.4 | 50.8 | 55.2
-C | R-101 | GIOULoss | 1x | N | N | 91.5 | 51.0 | 50.9 | 13.9 | 50.3 | 55.0
-C | X-101 | IOULoss | 1x | N | N | 92.4 | 52.7 | 52.0 | 15.3 | 51.4 | 55.7
-C | X-101 | GIOULoss | 1x | N | N | 91.6 | 52.3 | 51.4 | 16.2 | 50.8 | 55.4
-V | R-50 | IOULoss | 1x | N | N | 93.4 | 56.5 | 54.4 | 17.4 | 54.0 | 57.8
-V | R-50 | GIOULoss | 1x | N | N | 93.3 | 56.5 | 54.4 | 16.8 | 54.1 | 57.9
-V | R-101 | GIOULoss | 1x | N | 93.4 | 56.5 | 54.5 | 16.2 | 54.0 | 58.4
-V | X-101 | GIOULoss | 1x | N | 93.6 | 56.9 | 54.8 | 16.2 | 54.2 | 58.5
+F | R-50 | IOULoss | 1x | N | N | 56.7 | 56.7 | 56.7 | 23.3 | 56.3 | 59.9
+F | R-50 | GIOULoss | 1x | N | N | 56.4 | 56.4 | 56.4 | 20.8 | 56.0 | 59.7
+F | R-101 | IOULoss | 1x | N | N | 56.3 | 56.3 | 56.3 | 20.3 | 55.8 | 60.1
+F | R-101 | GIOULoss | 1x | N | N | 56.8 | 56.8 | 56.8 | 22.7 | 56.4 | 60.2
+F | X-101 | IOULoss | 1x | N | N | 56.8 | 56.8 | 56.8 | 21.9 | 56.4 | 60.1
+F | X-101 | GIOULoss | 1x | N | N | 56.4 | 56.4 | 56.4 | 22.0 | 55.8 | 60.4
+L | R-50 | IOULoss | 1x | N | N | 57.2 | 57.2 | 57.2 | 25.0 | 56.9 | 59.8
+L | R-50 | GIOULoss | 1x | N | N | 56.7 | 56.7 | 56.7 | 25.3 | 56.8 | 58.1
+L | R-101 | IOULoss | 1x | N | N | 57.2 | 57.2 | 57.2 | 25.7 | 56.9 | 60.1
+L | R-101 | GIOULoss | 1x | N | N | 56.6 | 56.6 | 56.6 | 24.9 | 56.4 | 58.9
+L | X-101 | IOULoss | 1x | N | N | 57.3 | 57.3 | 57.3 | 26.0 | 57.1 | 59.7
+L | X-101 | GIOULoss | 1x | N | N | 57.2 | 57.2 | 57.2 | 25.4 | 57.1 | 59.3
+C | R-50 | IOULoss | 1x | N | N | 57.3 | 57.3 | 57.3 | 25.2 | 57.1 | 59.5
+C | R-50 | GIOULoss | 1x | N | N | 57.6 | 57.6 | 57.6 | 25.5 | 57.3 | 60.6
+C | R-101 | IOULoss | 1x | N | N | 57.4 | 57.4 | 57.4 | 23.3 | 57.2 | 60.0
+C | R-101 | GIOULoss | 1x | N | N | 57.0 | 57.0 | 57.0 | 23.9 | 56.7 | 60.0
+C | X-101 | IOULoss | 1x | N | N | 57.2 | 57.2 | 57.2 | 25.0 | 56.9 | 59.8
+C | X-101 | GIOULoss | 1x | N | N | 56.7 | 56.7 | 56.7 | 25.3 | 56.8 | 58.1
+V | R-50 | IOULoss | 1x | N | N | 61.1 | 61.1 | 61.1 | 25.7 | 60.6 | 64.9
+V | R-50 | GIOULoss | 1x | N | N | 61.1 | 61.1 | 61.1 | 23.8 | 60.5 | 65.2
+V | R-101 | GIOULoss | 1x | N | N | 61.1 | 61.1 | 61.1 | 23.6 | 60.5 | 65.5
+V | X-101 | GIOULoss | 1x | N | N | 61.2 | 61.2 | 61.2 | 22.0 | 60.6 | 65.8
 # Postscript
 * If you want to modify the related display effects of the detection box, such as the color of the detection box, the thickness of the detection box, etc., you can modify the **show_result** method in **/mmdet/models/detectors/base.py**. For details, please refer to this [document](https://mmdetection.readthedocs.io/en/latest/_modules/mmdet/models/detectors/base.html?highlight=imshow_det_bboxes#). Pay attention to re-execute **pip install -v -e .** command after modification.
 * When we train **Cascade-R-CNN-ResNeXt101**, the loss value is nan. The solution to this problem can be [referred to](https://github.com/open-mmlab/mmdetection/issues/3013). Specifically, add the gradient clip option in **cascade_rcnn_x101_32x4d_fpn_1x.py**, that is, add the following line of code **optimizer_config = dict(_delete_=True, grad_clip=dict(max_norm=35, norm_type=2))**
