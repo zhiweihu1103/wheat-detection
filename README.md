@@ -58,8 +58,8 @@ CUDA_VISIBLE_DEVICES=0 python tools/test.py configs/wheat/faster_rcnn_r50_fpn_1x
 ```
 Then at **show_test/faster_rcnn_r50/normal** you will find the predict result with bbox.
 # Results and Logs (AP)
-Task | Backbone | Loss-Lr | schd | Att | DCN | fps | a-0.5 | a-0.75 | a-100-mul | s-mul | m-mul | l-mul | C-L |
-:--: | :------: | :-----: | :--: | :-: | :-: | :-: | :---: | :----: | :-------: | :---: | :---: | :---: | :-:
+Task | Backbone | Loss | schd | Att | DCN | fps | a-0.5 | a-0.75 | a-100-mul | s-mul | m-mul | l-mul | C-L |
+:--: | :------: | :--: | :--: | :-: | :-: | :-: | :---: | :----: | :-------: | :---: | :---: | :---: | :-:
 F | R-50 | L1Loss | 1x | N | N | 7.1 | 91.6 | 50.6 | 50.6 | 16.3 | 50.2 | 53.8
 F | R-50 | IOULoss | 1x | N | N | 6.83 | 91.5 | 50.2 | 50.4 | 15.7 | 49.9 | 53.8
 F | R-50 | GIOULoss | 1x | N | N | 6.76 | 91.5 | 49.5 | 50.2 | 16.0 | 49.8 | 53.7
@@ -111,8 +111,8 @@ V | X-101 | GIOULoss | 1x | N | N | 5.39 | 93.6 | 56.9 | 54.8 | 16.2 | 54.2 | 58
 * **a** represents all with maxDets value 1000. **a-100** represents all with maxDets value 100. **mul** represent 0.5:0.95.
 * C-L represent config and log files.
 # Results and Logs (AR)
-Task | Backbone | Loss-Lr | schd | Att | DCN | a-100 | a-300 | a-1000 | s-1000 | m-1000 | l-1000 |
-:--: | :------: | :-----: | :--: | :-: | :-: | :---: | :---: | :----: | :----: | :----: | :----: |
+Task | Backbone | Loss | schd | Att | DCN | a-100 | a-300 | a-1000 | s-1000 | m-1000 | l-1000 |
+:--: | :------: | :--: | :--: | :-: | :-: | :---: | :---: | :----: | :----: | :----: | :----: |
 F | R-50 | L1Loss | 1x | N | N | 56.8 | 56.8 | 56.8 | 23.5 | 56.4 | 59.9
 F | R-50 | IOULoss | 1x | N | N | 56.7 | 56.7 | 56.7 | 23.3 | 56.3 | 59.9
 F | R-50 | GIOULoss | 1x | N | N | 56.4 | 56.4 | 56.4 | 20.8 | 56.0 | 59.7
