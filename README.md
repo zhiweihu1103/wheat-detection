@@ -1,7 +1,7 @@
 # wheat-detection
 ## Description
 <tab><tab>This is the implementation code of our paper named An Empirical Study of Multi-Attention Mechanisms in Wheat Detection (**Under Reviewer**), the experimental results  will continue to be updated.
-# Install Dependencies
+## Install Dependencies
 ```
 conda create -n env_wheat
 conda activate env_wheat
