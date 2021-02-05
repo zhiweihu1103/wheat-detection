@@ -1,4 +1,6 @@
 # wheat-detection
+## Description
+<tab><tab>This is the implementation code of our paper named An Empirical Study of Multi-Attention Mechanisms in Wheat Detection (**Under Reviewer**), the experimental results  will continue to be updated.
 # Install Dependencies
 ```
 conda create -n env_wheat
@@ -19,7 +21,7 @@ If you run **pip install mmcv-full** meet wrong notification, you can see [here]
 ```
 pip install mmcv-full -f https://download.openmmlab.com/mmcv/dist/cu100/torch1.4.0/index.html
 ```
-# Prepare in advance
+## Prepare in advance
 * You should first process the data into voc2017 format and put it in the **data** path.
 * For subsequent training, you should modify the file under **config**. In our case, we have modified the following parts:
   * For **configs\_base_\models\faster_rcnn_r50_fpn.py** file
@@ -42,7 +44,7 @@ evaluation = dict(interval=1)
 total_epochs = 10
 work_dir = './logs_wheat/faster_rcnn_r50/normal'
 ```
-# Train
+## Train
 Take Faster R-CNN-R50 as example, you should cd the project root path, latter execute the following command
 ```
 sh scripts/train_faster_rcnn_r50_fpn_1x.sh
@@ -51,13 +53,13 @@ You can see the logs by following command
 ```
 tail -f logs_console/train_faster_rcnn_r50_fpn_1x.out
 ```
-# Test
+## Test
 Take Faster R-CNN-R50 as example, you should cd the project root path, latter execute the following command
 ```
 CUDA_VISIBLE_DEVICES=0 python tools/test.py configs/wheat/faster_rcnn_r50_fpn_1x.py logs_wheat/faster_rcnn_r50/normal/latest.pth --show-dir show_test/faster_rcnn_r50/normal --eval bbox
 ```
 Then at **show_test/faster_rcnn_r50/normal** you will find the predict result with bbox.
-# Results and Logs (AP)
+## Results and Logs (AP)
 Task | Backbone | Loss | schd | Att | DCN | fps | a-0.5 | a-0.75 | a-100-mul | s-mul | m-mul | l-mul | C-L |
 :--: | :------: | :--: | :--: | :-: | :-: | :-: | :---: | :----: | :-------: | :---: | :---: | :---: | :-:
 F | R-50 | L1Loss | 1x | N | N | 7.1 | 91.6 | 50.6 | 50.6 | 16.3 | 50.2 | 53.8
@@ -118,7 +120,7 @@ V | X-101 | GIOULoss | 1x | N | N | 5.39 | 93.6 | 56.9 | 54.8 | 16.2 | 54.2 | 58
 * schd: contains 1x and 2x.
 * **a** represents all with maxDets value 1000. **a-100** represents all with maxDets value 100. **mul** represent 0.5:0.95.
 * C-L represent config and log files.
-# Results and Logs (AR)
+## Results and Logs (AR)
 Task | Backbone | Loss | schd | Att | DCN | a-100 | a-300 | a-1000 | s-1000 | m-1000 | l-1000 |
 :--: | :------: | :--: | :--: | :-: | :-: | :---: | :---: | :----: | :----: | :----: | :----: |
 F | R-50 | L1Loss | 1x | N | N | 56.8 | 56.8 | 56.8 | 23.5 | 56.4 | 59.9
@@ -173,6 +175,6 @@ V | R-101 | GIOULoss | 1x | N | N | 61.1 | 61.1 | 61.1 | 23.6 | 60.5 | 65.5
 V | X-101 | IOULoss | 1x | N | N | 61.4 | 61.4 | 61.4 | 23.1 | 60.9 | 65.3
 V | X-101 | GIOULoss | 1x | N | N | 61.2 | 61.2 | 61.2 | 22.0 | 60.6 | 65.8
 * **a-100** represents all with maxDets value 100 (0.5:0.95)
-# Postscript
+## Postscript
 * If you want to modify the related display effects of the detection box, such as the color of the detection box, the thickness of the detection box, etc., you can modify the **show_result** method in **/mmdet/models/detectors/base.py**. For details, please refer to this [document](https://mmdetection.readthedocs.io/en/latest/_modules/mmdet/models/detectors/base.html?highlight=imshow_det_bboxes#). Pay attention to re-execute **pip install -v -e .** command after modification.
 * When we train **Cascade-R-CNN-ResNeXt101**, the loss value is nan. The solution to this problem can be [referred to](https://github.com/open-mmlab/mmdetection/issues/3013). Specifically, add the gradient clip option in **cascade_rcnn_x101_32x4d_fpn_1x.py**, that is, add the following line of code **optimizer_config = dict(_delete_=True, grad_clip=dict(max_norm=35, norm_type=2))**
