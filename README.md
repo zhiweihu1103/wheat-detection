@@ -179,7 +179,7 @@ V | X-101 | GIOULoss | 1x | N | N | 61.2 | 61.2 | 61.2 | 22.0 | 60.6 | 65.8
 * If you want to modify the related display effects of the detection box, such as the color of the detection box, the thickness of the detection box, etc., you can modify the **show_result** method in **/mmdet/models/detectors/base.py**. For details, please refer to this [document](https://mmdetection.readthedocs.io/en/latest/_modules/mmdet/models/detectors/base.html?highlight=imshow_det_bboxes#). Pay attention to re-execute **pip install -v -e .** command after modification.
 * When we train **Cascade-R-CNN-ResNeXt101**, the loss value is nan. The solution to this problem can be [referred to](https://github.com/open-mmlab/mmdetection/issues/3013). Specifically, add the gradient clip option in **cascade_rcnn_x101_32x4d_fpn_1x.py**, that is, add the following line of code **optimizer_config = dict(_delete_=True, grad_clip=dict(max_norm=35, norm_type=2))**
 * If you encounter the following problem **AttributeError: module 'pycocotools' has no attribute '__version__'**. You should execute the following commands in order: 
-- pip uninstall mmpycocotools
-- pip uninstall pycocotools
-- pip install -v -e .
+ * pip uninstall mmpycocotools
+ * pip uninstall pycocotools
+ * pip install -v -e .
 * If you encounter the following problem **cannot import name 'Config' from 'mmcv'**. You should re-install mmcv.
